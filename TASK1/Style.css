@@ -1,0 +1,112 @@
+
+/*
+Body tag 
+*/
+body{
+    background-color: antiquewhite;
+}
+/*
+Black rectangle logo
+*/
+.rectangle {
+    top: 0%;
+    margin-left: 90px;
+    height: 300px;
+    width: 300px;
+	border-left: 400px solid #000000;
+}
+/*
+Logo image
+*/
+img{
+    position: absolute;
+    bottom: 0;
+    top: 25%;
+    left: 90px;
+    width: 400px;
+}
+/*
+Navigation Pannel
+*/
+nav{
+    top:0%;
+    display: flex;
+    left: 500;
+    justify-content: center;
+}
+ul{
+    top:0%;
+    list-style: none;
+    display: inline;
+}
+ul li{
+    top:0%;
+    display: inline-block;
+    padding: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+/*
+Hire Logo
+*/
+.image{
+    margin-top: 0%;
+    position: absolute;
+    margin-left: 500px;
+    
+}
+
+/*
+IOT Image
+*/
+.image1{
+    margin-top: 0%;
+    position: absolute;
+    margin-left: 0px;
+    height: 150px;
+    width: 200px;
+
+    
+}
+
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: blue;
+  }
+/*
+Marquee Formatting
+*/
+marquee{
+    top: 40%;
+    background-color: red;
+}
+/*
+Apply Now logo CSS 
+*/
+.button1{
+    width:max-content;
+    height: 100px;
+   margin-top: 10px;
+    border: black;
+    outline: black;
+    margin-left: 1200px;
+    font-size: 20px;
+}
+/*
+Contact Us Form Styling
+*/
+form{
+    width:max-content;
+    height: 50px;
+    margin-top: 10px;
+    
+    border: black;
+    outline: black;
+    margin-left: 600px;
+    font-size: 20px;
+}
