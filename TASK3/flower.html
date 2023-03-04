@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title>Flowering Plants</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<script language="Javascript" type="text/javascript">
+	function resetList(ele)
+	{
+		with(document.forms.form3)
+		{
+			if(ele==1)
+			{
+				m[0].text="White Lily"
+				m[0].value=1
+				m[1].text="Tuberose"
+				m[1].value=2
+				m[2].text="Orchid"
+				m[2].value=3
+				m[3].text="White Trillium"
+				m[3].value=4
+			}
+			if(ele==2)
+			{
+				m[0].text="Rose"
+				m[0].value=1
+				m[1].text="Yellow Bells"
+				m[1].value=2
+				m[2].text="Periwinkle"
+				m[2].value=3
+			}
+		}
+	}
+	var qtt;
+	var obj;
+	function get_qty()
+	{
+		
+		qtt = document.getElementById("t1").value;
+			
+		if(document.getElementById("t1").value == "")
+		{
+			document.getElementById("tf1").value="* Plz Enter the Quantity...";
+			document.getElementById("tf1").style.color="red";
+		}
+		if(qtt > 10 || qtt == "" || qtt <= 0)
+		{
+			document.getElementById("t2").value= "*Sorry...Max quantity is 10";
+			document.getElementById("t2").style.color="red";
+		}
+		else
+		{
+			document.getElementById("t2").value= "Quantity is acceptable...";
+		}
+		
+		
+		/*qtt = document.getElementById("t1").value;
+		if(qtt > 10)
+		{
+			document.getElementById("t2").value= "*Sorry...Max quantity is 10";
+			document.getElementById("t2").style.color="red";
+		}
+		else
+		{
+			document.getElementById("t2").value= "Quantity is acceptable...";
+		} */
+
+	}
+	function getOrder()
+	{
+		if(qtt==null)
+		{
+			document.getElementById("t2").value= "Plz...Enter Quantity";
+			document.getElementById("t2").style.color="red"
+		}
+		obj = document.getElementById("m1").value;
+		document.getElementById("order").innerHTML = "Plant: "+obj;
+		document.getElementById("tf1").value="Quantity: " +qtt;
+			
+			/*document.write("Plant: "+ obj.options[obj.selectedIndex].value);
+			document.write("Quantity: "+ qtt)*/		
+	}
+	function finalOrder()            
+	{               
+		fo = window.open('finalOrder.html','Final Order','width=700,height=700,left=300,top=250');
+		fo.focus();
+	}    
+	</script>
+</head>
+<body background="Background.gif" backgroun">   
+	<form name="form3" method="get">
+	<BR><BR>
+	<center>
+	<h2>-----Flowering Plants Section------</h2>
+	<HR/>
+	<P><select id="m1" name="m">
+	<option value=WhiteLily>White Lily</option>
+	<option value=Tuberose>Tuberose</option>
+	<option value=Orchid>Orchid</option>
+	<option value=WhiteTrillium>White Trillium</option>
+	</select>
+	<BR><BR>
+	<center>
+	
+	<input type="radio" name="r1" checked="true" value=1 onclick="resetList(this.value)"><b>Monocot Flowers</b>
+	<input type="radio" name="r1" value=2 onclick="resetList(this.value)"><b>Dicot Flowers</b><BR>
+	<i>(Select plants according to the categories)</i>
+
+	<BR><BR>
+	<center>
+	<b>Enter Quantity</b>
+	<input type="number" id="t1" name="qty" />
+	<BR><BR>
+	<input type="button" name="b1" value="Set Quantity" onclick="get_qty()"/>
+	<input type="text" id="t2" size="30" name="qty1" />
+	<BR><BR>
+	<input type="button" name="submit" value="Add Order" onclick="getOrder()"/>
+	<input type="reset" name="reset" value="Reset Order"/>
+	<BR>
+	<h3><i><<<<< Your Order >>>>></i></h3>
+	<textarea id="order" name="ta" style="text-align:center" rows="4" cols="30" readonly>
+	Plants you ordered...
+	</textarea><BR>
+	<input type="text" id="tf1" name="tf1" style="text-align:center" size="30" readonly /><BR><BR>
+	**********************************************************<BR>
+	Click here to get Final Order
+	<input type="button" name="final" value="Final Order" onclick="finalOrder()"/>
+	
+	</P>
+	</center>
+	</form>
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	

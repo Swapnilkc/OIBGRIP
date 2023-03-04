@@ -1,0 +1,23 @@
+body{
+  background-color: black;
+}
+  
+  img {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .text { 
+    background-color: black;
+    color: white;
+        font-size: 20px;
+    padding-left: 20px;
+    margin-top: 0px;
+  }
+  button{
+    width: 120px;
+  }
+  marquee{
+    background-color: black;
+    color: white;
+  }
